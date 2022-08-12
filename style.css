@@ -215,4 +215,8 @@ td .remove {
   header .header-title {
     margin-bottom: 2rem;
   }
+
+  .empty-users {
+    height: 40rem;
+  }
 }
