@@ -2,17 +2,23 @@ import { FavoritesView } from "./Favorites.js";
 
 new FavoritesView("#app");
 
-const input = document.querySelector(".search input"); // get the input element
-input.addEventListener("resize", resizeInput); // bind the "resizeInput" callback on "input" event
-resizeInput.call(input); // immediately call the function
-
+const input = document.querySelector(".search input");
+const button = document.querySelector(".search button");
+input.addEventListener("resize", resizeInput);
+button.addEventListener("resize", resizeButton);
+resizeInput.call(input);
+resizeButton.call(button);
 function resizeInput() {
-  console.log(document.documentElement.clientWidth);
-  console.dir(input);
-  console.log(this.placeholder);
-
   if (document.documentElement.clientWidth <= 700) {
-    this.style.width = "20rem";
-    this.placeholder = "aaa";
+    this.style.width = "15rem";
+    this.style.height = "3rem";
+    this.placeholder = "Favorite user";
+  }
+}
+function resizeButton() {
+  console.dir(button);
+  if (document.documentElement.clientWidth <= 700) {
+    this.style.height = "3rem";
+    this.innerText = "";
   }
 }
