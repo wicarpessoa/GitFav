@@ -69,6 +69,7 @@ header {
 }
 .search button {
   display: flex;
+  align-items: center;
   gap: 0.8rem;
 
   background-color: #065e7c;
@@ -228,7 +229,7 @@ td .remove {
     flex-direction: column;
   }
   .empty-users svg {
-    width:10rem;
+    width: 10rem;
     height: 10rem;
   }
 }
